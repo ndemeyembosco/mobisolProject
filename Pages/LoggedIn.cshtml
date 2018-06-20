@@ -1,0 +1,35 @@
+@page
+@model mobisolProject.Pages.LoggedInModel
+
+@{
+    ViewData["Title"] = "LoggedIn";
+}
+
+<div>
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <button>@Model.Customers[0].Username</button>
+            </div>
+            <div class="row">Log out</div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="#Ordering">Ordering</a>
+        </div>
+        <div class="col-md-4">
+            <a href="#PayStatus">Payment Status</a>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div id="package"></div>
+    <div id="payPeriod"></div>
+</div>

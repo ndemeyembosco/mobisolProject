@@ -1,0 +1,46 @@
+@page
+@model mobisolProject.Pages.Buys.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Buy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Buy.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buy.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buy.TotalAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buy.TotalAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buy.CustomerId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buy.CustomerId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buy.ProductId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buy.ProductId)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Buy.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,10 @@
+/Users/boscondemeye/Desktop/mobisolProject/bin/Debug/netcoreapp2.0/mobisolProject.deps.json
+/Users/boscondemeye/Desktop/mobisolProject/bin/Debug/netcoreapp2.0/mobisolProject.runtimeconfig.json
+/Users/boscondemeye/Desktop/mobisolProject/bin/Debug/netcoreapp2.0/mobisolProject.runtimeconfig.dev.json
+/Users/boscondemeye/Desktop/mobisolProject/bin/Debug/netcoreapp2.0/mobisolProject.dll
+/Users/boscondemeye/Desktop/mobisolProject/bin/Debug/netcoreapp2.0/mobisolProject.pdb
+/Users/boscondemeye/Desktop/mobisolProject/obj/Debug/netcoreapp2.0/mobisolProject.csproj.CoreCompileInputs.cache
+/Users/boscondemeye/Desktop/mobisolProject/obj/Debug/netcoreapp2.0/mobisolProject.AssemblyInfoInputs.cache
+/Users/boscondemeye/Desktop/mobisolProject/obj/Debug/netcoreapp2.0/mobisolProject.AssemblyInfo.cs
+/Users/boscondemeye/Desktop/mobisolProject/obj/Debug/netcoreapp2.0/mobisolProject.dll
+/Users/boscondemeye/Desktop/mobisolProject/obj/Debug/netcoreapp2.0/mobisolProject.pdb

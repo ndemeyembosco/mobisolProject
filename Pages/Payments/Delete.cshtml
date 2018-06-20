@@ -1,0 +1,40 @@
+@page
+@model mobisolProject.Pages.Payments.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Payment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.PayDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.PayDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.Amount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.Amount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.SaleId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Payment.SaleId)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Payment.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

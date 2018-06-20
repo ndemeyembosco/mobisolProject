@@ -1,0 +1,41 @@
+@page
+@model mobisolProject.Pages.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Customer.Username" class="control-label"></label>
+                <input asp-for="Customer.Username" class="form-control" />
+                <span asp-validation-for="Customer.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.Password" class="control-label"></label>
+                <input asp-for="Customer.Password" class="form-control" />
+                <span asp-validation-for="Customer.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-default" />
+            </div>
+            <div>
+                <a href="/Customers/Create">Sign Up</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

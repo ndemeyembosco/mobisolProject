@@ -1,0 +1,40 @@
+@page
+@model mobisolProject.Pages.Maintenances.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Maintenance</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Maintenance.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Maintenance.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Maintenance.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Maintenance.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Maintenance.SaleId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Maintenance.SaleId)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Maintenance.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
