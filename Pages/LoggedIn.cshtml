@@ -5,31 +5,72 @@
     ViewData["Title"] = "LoggedIn";
 }
 
-<div>
-    <div class="row">
-        <div class="col-md-3">
+<script type="text/javascript" language="javascript">
+               window.onbeforeunload = function() {
+                   var Ans = confirm("Are you sure you want change page!");
+                   if(Ans==true)
+                       return true;
+                   else
+                       return false;
+               };
+</script>
 
-        </div>
-        <div class="col-md-6">
+<div class="row" style="text-align:center;" id="Ordering">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 well">
+        <div class="row" style="margin:0px;">
+            <div class="col-md-3">
 
-        </div>
-        <div class="col-md-3">
-            <div class="row">
-                <button>@Model.Customers[0].Username</button>
             </div>
-            <div class="row">Log out</div>
+            <div class="col-md-6">
 
+            </div>
+            <div class="col-md-3 well" style="background-color:slategray;">
+                    <button style="margin:4px;">@Html.DisplayFor(s => @Model.Customers.Username)</button>
+                <form method="post">
+                    <input type="submit" value="Logout" />
+                </form>
+            </div>
         </div>
+        <div class="row well" style="background-color:skyblue;margin:0px;">
+            <div class="col-md-4">
+                <a href="#Ordering">Ordering</a>
+            </div>
+            <div class="col-md-4">
+                <a href="#PayStatus">Payment Status</a>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div id="package" class="well">
+            <div style="background-color:skyblue;" class="well">Package</div>
+            <div class="form-group">
+                <label for="sel1">Choose package:</label>
+                <select class="form-control" id="sel1">
+                    <option>Basic Family Package</option>
+                    <option>Premium Package</option>
+                    <option>Family Package</option>
+                </select>
+            </div>
+        </div>
+        <div id="payPeriod" class="well" style="margin:0px;">
+            <div style="background-color:skyblue;margin:0px;" class="well">Payment Period</div>
+            <div class="row">
+                <label class="radio-inline"><input type="radio" name="optradio">3 Years</label>
+                <label class="radio-inline"><input type="radio" name="optradio">2 Years</label>
+                <label class="radio-inline"><input type="radio" name="optradio">1 Years</label>
+            </div>
+        </div>
+        <div class="row well" style="margin:0px;">
+            <div class="col-sm-1">Discount</div>
+            <div class="col-sm-3">
+                <ul>
+                    <li>10% in Two Years</li>
+                    <li>15% in One Year</li>
+                </ul>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <button type="button" class="btn btn-primary" style="margin:2px;display:inline-block;">Submit</button>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <a href="#Ordering">Ordering</a>
-        </div>
-        <div class="col-md-4">
-            <a href="#PayStatus">Payment Status</a>
-        </div>
-        <div class="col-md-4"></div>
-    </div>
-    <div id="package"></div>
-    <div id="payPeriod"></div>
+    <div class="col-md-1"></div>
 </div>

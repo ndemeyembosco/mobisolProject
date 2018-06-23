@@ -18,31 +18,53 @@
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
+        <div class="container" style="min-height:4.6em;">
+            <div class="navbar-header" style="margin-bottom:1px;">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">mobisolProject</a>
+                <a asp-page="/Index" class="navbar-brand">
+                    <img src="~/images/mobiLogo.jpg"  class="img-circle" height="40em" width="38em"/>
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
                     <li><a asp-page="/About">About Us</a></li>
                     <li><a asp-page="/Products">Products</a></li>
-                    <!-- todo  -->
-                    <li><a asp-page="/Customers/Create">Register</a></li>  
                     <!-- todo  -->
                     <li><a asp-page="/Login">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container body-content" style="background:url(~/images/background.jpg)">
-        @RenderBody()
+    <style>
+        #rendered {
+            /* color: green; */
+            /* background-color: aquamarine; */
+            background-image: url(/images/background.jpg);
+            background-size: cover;
+            margin: 0px;
+            width: 100%;
+            padding: 0px;
+            min-height: 50em;
+        }
+
+        #bodyContainer {
+            min-height: 40em;
+        }
+
+        #emptySeparator {
+            height: 2em;
+        }
+    
+    </style>
+    <div class="container body-content" id="rendered">
+        <div class="row" id="emptySeparator"></div>
+        <div id="bodyContainer">@RenderBody()</div>
+        
         <hr />
         <footer>
             <p>&copy; 2017 - mobisolProject</p>

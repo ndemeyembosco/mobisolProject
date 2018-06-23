@@ -9,8 +9,9 @@ namespace mobisolProject.Models
         public string LastName {get; set;}
         public string Phone {get; set;}
         public string Email { get; set; }
-        [Key]
         public string Username {get; set;}
+        
+        [Key, DataType(DataType.Password)]
         public string Password {get; set;}
     }
 }

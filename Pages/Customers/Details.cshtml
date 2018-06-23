@@ -36,14 +36,17 @@
             @Html.DisplayFor(model => model.Customer.Email)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Customer.Password)
+            @Html.DisplayNameFor(model => model.Customer.Username)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Customer.Password)
+            @Html.DisplayFor(model => model.Customer.Username)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Password)
+        </dt>
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Customer.Username">Edit</a> |
+    <a asp-page="./Edit" asp-route-id="@Model.Customer.Password">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>

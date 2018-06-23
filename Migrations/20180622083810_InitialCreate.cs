@@ -28,12 +28,12 @@ namespace mobisolProject.Migrations
                 name: "Customer",
                 columns: table => new
                 {
-                    Password = table.Column<string>(maxLength: 8, nullable: false),
+                    Password = table.Column<string>(nullable: false),
                     Email = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     Phone = table.Column<string>(nullable: true),
-                    Username = table.Column<string>(maxLength: 100, nullable: false)
+                    Username = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

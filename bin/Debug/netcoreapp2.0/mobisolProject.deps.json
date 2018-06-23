@@ -25,6 +25,7 @@
         "dependencies": {
           "DD.EfCore": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.5",
+          "Microsoft.AspNetCore.Authentication.Cookies": "2.0.1",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "2.0.0"

@@ -39,8 +39,7 @@ namespace mobisolProject.Migrations
             modelBuilder.Entity("mobisolProject.Models.Customer", b =>
                 {
                     b.Property<string>("Password")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(8);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Email");
 
@@ -50,9 +49,7 @@ namespace mobisolProject.Migrations
 
                     b.Property<string>("Phone");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Username");
 
                     b.HasKey("Password");
 

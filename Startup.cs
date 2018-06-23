@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using mobisolProject.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace mobisolProject
 {
@@ -24,9 +25,19 @@ namespace mobisolProject
         public void ConfigureServices(IServiceCollection services)
         {
             // services.AddMvc();
+            services.AddAuthentication(options =>
+            {
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            }).AddCookie(options => {});
             services.AddDbContext<MobiDBContext>(options =>
              options.UseSqlite(Configuration.GetConnectionString("MobiDBContext")));
-            services.AddMvc();
+            services.AddMvc().AddRazorPagesOptions(options =>
+                {
+                    // options.Conventions.AuthorizeFolder("/");
+                    // options.Conventions.AllowAnonymousToPage("/Login");
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,8 +53,9 @@ namespace mobisolProject
             }
 
             app.UseStaticFiles();
-
+            app.UseAuthentication();
             app.UseMvc();
+            
         }
     }
 }

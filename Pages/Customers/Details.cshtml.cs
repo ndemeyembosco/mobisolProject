@@ -27,7 +27,7 @@ namespace mobisolProject.Pages.Customers
                 return NotFound();
             }
 
-            Customer = await _context.Customer.SingleOrDefaultAsync(m => m.Username == id);
+            Customer = await _context.Customer.SingleOrDefaultAsync(m => m.Password == id);
 
             if (Customer == null)
             {

@@ -26,7 +26,7 @@
                     @Html.DisplayNameFor(model => model.Customer[0].Email)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Customer[0].Password)
+                    @Html.DisplayNameFor(model => model.Customer[0].Username)
                 </th>
             <th></th>
         </tr>
@@ -47,12 +47,15 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Password)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Username">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Username">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Username">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.Password">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Password">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Password">Delete</a>
             </td>
         </tr>
 }

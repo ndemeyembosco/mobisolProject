@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using mobisolProject.Models;
+using Microsoft.AspNetCore.Authentication;
+using System.ComponentModel.DataAnnotations;
 
 namespace mobisolProject.Pages
 {
@@ -18,32 +20,20 @@ namespace mobisolProject.Pages
         {
             _context = context;
         }
+        
+        public Customer Customers {get; set;}
 
-        public IList<Customer> Customers {get; set;}
-
-        public async Task OnGetAsync(string username, string password)
-        {
-            // var  items = _context.Customer.Where(t => t.Username == username);
-            Customers = await _context.Customer.ToListAsync();
-            // return Page();
+        public async Task OnGetAsync(Customer customer)
+        {  
+            Console.WriteLine(customer.Username);
+            Customers = customer;
         }
 
-
-        
-
-        // public async Task<IActionResult> OnPostAsync(string username, string password)
-        // {
-        //     if (!ModelState.IsValid)
-        //     {
-        //         return Page();
-        //     }
-        //     var  items = _context.Customer.Where(t => t.Username == username);
-        //     Customers = await items.ToListAsync();
-        //     await _context.SaveChangesAsync();
-
-        //     return RedirectToPage("./LoggedIn");
-        // }
-
+        public async Task<IActionResult> OnPostAsync()
+        {
+        await HttpContext.SignOutAsync();
+        return RedirectToPage("./Login");
+        }
 
     }
 }

@@ -10,7 +10,7 @@ using System;
 namespace mobisolProject.Migrations
 {
     [DbContext(typeof(MobiDBContext))]
-    [Migration("20180620092209_InitialCreate")]
+    [Migration("20180622083810_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,8 +40,7 @@ namespace mobisolProject.Migrations
             modelBuilder.Entity("mobisolProject.Models.Customer", b =>
                 {
                     b.Property<string>("Password")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(8);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Email");
 
@@ -51,9 +50,7 @@ namespace mobisolProject.Migrations
 
                     b.Property<string>("Phone");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Username");
 
                     b.HasKey("Password");
 

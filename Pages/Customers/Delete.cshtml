@@ -37,15 +37,18 @@
             @Html.DisplayFor(model => model.Customer.Email)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Customer.Password)
+            @Html.DisplayNameFor(model => model.Customer.Username)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Customer.Password)
+            @Html.DisplayFor(model => model.Customer.Username)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Password)
+        </dt>
     </dl>
     
     <form method="post">
-        <input type="hidden" asp-for="Customer.Username" />
+        <input type="hidden" asp-for="Customer.Password" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-page="./Index">Back to List</a>
     </form>
