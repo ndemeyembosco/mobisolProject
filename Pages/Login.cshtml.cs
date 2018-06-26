@@ -64,26 +64,6 @@ namespace mobisolProject.Pages
             ModelState.AddModelError("", "username or password is blank");
             return Page();
             }
-            // var customers = from i in _context.Customer select i;
-
-            // if (!String.IsNullOrEmpty(password))
-            // {
-            //     customers = customers.Where(s => s.Password.Equals(password));
-            
-            // }
-
-            // Customers = await customers.ToListAsync();
-            // if (Customers.Count != 0) 
-            // {
-            //     Console.Write("Customers is not empty");
-            //     Console.Write(username);
-            //     Console.Write(Customer);
-            //     return RedirectToPage("./LoggedIn");
-            // }else 
-            // {
-            //     Console.WriteLine("Customers is empty");
-            //     return Page();
-            // }
             
             }
 
