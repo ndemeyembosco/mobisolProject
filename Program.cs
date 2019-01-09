@@ -20,6 +20,6 @@ namespace mobisolProject
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .Build(); # modify later
+                .Build(); // modify later
     }
 }
